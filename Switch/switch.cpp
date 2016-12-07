@@ -1,15 +1,16 @@
 #include "switch.h"
 #include "Arduino.h"
 
-Switch::Switch(const int buttonPin, const int polarity) :
+Switch::Switch(const int buttonPin, const int polarity, const bool usePullUp, const unsigned long debounceDelay) :
   m_iButtonPin(buttonPin),
   m_iPolarity(polarity), // LOW or HIGH  polarity
   m_iButtonState((polarity == HIGH) ? LOW : HIGH), // the current reading from the input pin
   m_iLastButtonState((polarity == HIGH) ? LOW : HIGH), // the previous reading from the input pin
   m_lLastDebounceTime(0), // the last time the output pin was toggled
-  m_lDebounceDelay(50) // the debounce time; increase if the output flickers
+  m_lDebounceDelay(debounceDelay) // the debounce time; increase if the output flickers
 {
-  pinMode(m_iButtonPin, INPUT_PULLUP); // set as input
+  if (usePullUp) pinMode(m_iButtonPin, INPUT_PULLUP); // set as input with pull-up
+  else pinMode(m_iButtonPin, INPUT); // set as input without pull-up
 }
 
 
