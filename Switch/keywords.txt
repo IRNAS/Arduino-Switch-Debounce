@@ -1,0 +1,31 @@
+#######################################
+# Syntax Coloring Map For Switch
+#######################################
+
+#######################################
+# Datatypes (KEYWORD1)
+#######################################
+Switch	KEYWORD1
+
+#######################################
+# Methods and Functions (KEYWORD2)
+#######################################
+
+m_iButtonState	KEYWORD2
+m_iLastButtonState	KEYWORD2
+m_lLastDebounceTime	KEYWORD2
+
+m_iPolarity	KEYWORD2
+m_iButtonPin	KEYWORD2
+m_lDebounceDelay	KEYWORD2
+get_button_state	KEYWORD2
+
+#######################################
+# Instances (KEYWORD2)
+#######################################
+
+Switch	 KEYWORD2
+
+#######################################
+# Constants (LITERAL1)
+#######################################
