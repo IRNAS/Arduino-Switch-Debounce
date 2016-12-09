@@ -25,7 +25,7 @@ bool Switch::get_button_state()
   // read the state of the switch into a local variable:
   int reading = digitalRead(m_iButtonPin);
 
-  // If the switch changed, due to noise or pressing:
+  // if the switch changed, due to noise or pressing:
   if (reading != m_iLastButtonState)
   {
     m_iLastButtonState = reading;

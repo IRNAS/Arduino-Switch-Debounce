@@ -8,7 +8,7 @@ class Switch
     int m_iLastButtonState; // the previous reading from the input pin
 
     // the following variables are unsigned long's because the time, measured in miliseconds,
-    // will quickly become a bigger number than can be stored in an int.
+    // will quickly become a bigger number than can be stored in an int
     unsigned long m_lLastDebounceTime; // the last time the output pin was toggled
 
     int m_iPolarity; // LOW or HIGH polarity
